@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    菜单
+    <HelloWorld msg="dsfdfdfgfsgsfg"></HelloWorld>
   </div>
 </template>
 

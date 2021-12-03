@@ -22,20 +22,28 @@ export const menus = [
     label: '通用库',
     id: 'generalLibrary',
     routeName: 'GeneralLibrary',
+    activedCode: 'generalLibrary',
+    redirects: ['GeneralLibrary'],
     children: [
       {
         id: 'g-components',
         label: '公共组件',
+        routeName: 'Components',
+        redirects: ['GeneralLibrary', 'Components'],
         children: components
       },
       {
         id: 'g-methods',
         label: '公共方法',
+        routeName: 'Methods',
+        redirects: ['GeneralLibrary', 'Methods'],
         children: methods
       },
       {
         id: 'g-regular',
         label: '公共正则',
+        routeName: 'Regular',
+        redirects: ['GeneralLibrary', 'Regular'],
         children: regulars
       }
     ]
@@ -53,6 +61,7 @@ export const menus = [
     id: 'project',
     routeName: 'Project',
     type: 'select',
+    redirects: ['Project'],
     children: [
       {
         label: '翎西',

@@ -22,9 +22,11 @@ function getPermissionObj(list, obj) {
       let itemRout = {
         path: item.routeName,
         component: RouteView,
-        name: item.routeName
+        name: item.routeName,
+        redirect: '/' + item.redirects.join('/') + '/' + item.children[0].routeName
       }
       getPermissionObj(item.children, itemRout)
+      obj.children.push(itemRout)
     } else {
       let itemRout = {
         path: item.routeName,

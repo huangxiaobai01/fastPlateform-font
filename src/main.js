@@ -17,6 +17,10 @@ Vue.use(vuescroll)
 import api from '@/api/index.js'
 Vue.prototype.api = api
 
+// 引入自定义组件库
+import HuangLibrary from 'huangxiaobai-library'
+Vue.use(HuangLibrary)
+
 // 引入echarts
 import '@/utils/initEcharts.js';
 

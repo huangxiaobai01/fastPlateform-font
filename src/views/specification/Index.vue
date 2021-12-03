@@ -61,7 +61,6 @@ export default {
         fileName: file.url
       }
       this.api.common.downloadSpecification(options).then(res => {
-        debugger
         if (res.code === 200) {
           let blob = new Blob([res.data], {type: file.type});
           let downloadElement = document.createElement("a");

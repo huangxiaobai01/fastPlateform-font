@@ -63,7 +63,6 @@ function deleteHttp (list, key) {
 }
 methods.forEach(v => {
   http[v] = (url, data, baseUrl, headers, responseType, noLoading) => {
-    debugger
     let new_headers = '';
     // 除登录接口外，其他接口默认带token
     // if (url.indexOf('login') > 0) {
@@ -105,9 +104,7 @@ methods.forEach(v => {
         // return Promise.reject({ code: 1001, msg: '未授权' })
         return {}
       }
-      debugger
       if (response.headers["content-disposition"] || response.headers['content-type'] !== 'application/json' ) {
-        debugger
         let fileName = ''
         if (response.headers["content-disposition"]) {
           fileName = (response.headers["content-disposition"].split(';')[1]).split('=')[1]

@@ -41,8 +41,9 @@ export default {
   },
   methods: {
     toPath(router) {
-      debugger
-      this.$router.push(router.routeName)
+      this.$router.push({
+        name: router.routeName
+      })
     }
   }
 }
